@@ -1,0 +1,49 @@
+def add(x,y):
+    return x + y
+
+def subtract(x,y):
+    return x - y
+
+def multiply(x,y):
+    return x * y
+
+def divide(x,y):
+    return x / y
+
+
+
+
+print("""Choose a Math Operation
+Enter "A" for Addition
+Enter "S" for Subtraction
+Enter "M" for Multiplication
+Enter "D" for Division
+""")
+
+
+
+while True:
+    
+    choice = input("Enter a choice (A,S,M,D): ")
+
+    number_one = int(input("Enter First Number: "))
+
+    number_two = int(input("Enter Second Number: "))
+
+    if choice.lower() in ['a','add','addition']:
+        print(number_one, "+", number_two, "=",add(number_one,number_two))
+    elif choice.lower() in ['s','sub','subtraction']:
+        print(number_one, "-", number_two, "=",subtract(number_one,number_two))
+    elif choice.lower() in ['m','multiply','multiplication']:
+        print(number_one, "*", number_two, "=",multiply(number_one,number_two))
+    elif choice.lower() in ['d','divide','division']:
+        print(number_one, "/", number_two, "=",divide(number_one,number_two))
+
+    else:
+        print("Please enter an valid input (A,S,M,D)")
+        
+    next_calculation = input("Do you want to do another calculation? (yes,no): ")
+    if next_calculation.lower() in ['no','n','nope']:
+        break
+    else:
+        continue
